@@ -5,7 +5,7 @@ export const pedidos = [
       grupo: "Borrachos de DAW2",
       cerveza: "Estrella Galicia",
       cantidad: 3,
-      estado: "pendiente" 
+      estado: "servido" 
     },
     {
       id: 2,
@@ -13,7 +13,7 @@ export const pedidos = [
       grupo: "Cabezones contentos",
       cerveza: "Estrella Galicia",
       cantidad: 2,
-      estado: "pendiente" 
+      estado: "servido" 
     },
     {
       id: 3,
