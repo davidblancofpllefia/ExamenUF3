@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { bd } from '../bd/bd';
 
-function NuevoPedido() {
+function NuevoPedido({ onCervezaSelect }) {
   const [selectedCerveza, setSelectedCerveza] = useState(''); 
   const [cantidad, setCantidad] = useState(0); 
 
-
   const handleCervezaChange = (e) => {
-    setSelectedCerveza(e.target.value); 
+    const id = e.target.value;
+    setSelectedCerveza(id);
+    onCervezaSelect(id);  
   };
-
 
   const handleCantidadChange = (e) => {
     setCantidad(e.target.value); 
@@ -27,7 +27,6 @@ function NuevoPedido() {
       <h3 className="mt-5">Haz tu pedido</h3>
       
       <div className="d-flex gap-3">
-
         <select 
           name="cervezas" 
           id="cervezas" 
@@ -42,7 +41,6 @@ function NuevoPedido() {
             </option>
           ))}
         </select>
-
 
         <input 
           type="number" 
