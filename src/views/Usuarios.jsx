@@ -1,6 +1,6 @@
 import React from 'react';
 import NuevoPedido from '../components/NuevoPedido';
-
+import FichaBirra from '../components/FichaBirra';
 
 function Usuarios() {
   return (
@@ -10,17 +10,13 @@ function Usuarios() {
         <div className="col-md-6">
           <NuevoPedido />
         </div>
-    
+
         <div className="col-md-6 border">
-          <div className="p-3 d-flex">
-            <div className="w-50">
-              <img src="estrella.jpg" alt="Estrella Galicia" className="w-100" />
-            </div>
-            <div className="ms-3">
-              <h4>Estrella Galicia</h4>
-              <p>Cerveza suave y equilibrada con un sabor ligeramente amargo y aroma a malta.</p>
-            </div>
-          </div>
+          <FichaBirra
+            imagen="estrella.jpg"
+            nombre="Estrella Galicia"
+            descripcion="Cerveza suave y equilibrada con un sabor ligeramente amargo y aroma a malta."
+          />
         </div>
       </div>
     </div>
@@ -28,3 +24,4 @@ function Usuarios() {
 }
 
 export default Usuarios;
+
